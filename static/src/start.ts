@@ -1,10 +1,11 @@
 import * as angular from 'angular';
-import Greeting from './copmonents/greetings';
+import App from './copmonents/app/app';
+import Message from './copmonents/message/message';
 
 const bootstrapElement = document.getElementById('application');
-const application = angular.module('mainModule', [Greeting.name])
-    .controller('MainController', function() {
-        this.hey = 'hey dude! come on!';
-    });
+const application = angular.module('mainModule', [
+        App.name,
+        Message.name
+    ]);
 
 angular.bootstrap(bootstrapElement, [application.name]);

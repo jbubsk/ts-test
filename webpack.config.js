@@ -6,7 +6,10 @@ module.exports = {
         publicPath: '/assets/'
     },
     resolve: {
-        root: __dirname + '/node_modules',
+        root: [
+            __dirname + '/node_modules',
+            __dirname + '/static/src'
+        ],
         extensions: ['', '.webpack.js', '.web.js', '.ts', '.tsx', '.js']
     },
     resolveLoader: {
@@ -19,6 +22,10 @@ module.exports = {
             {
                 test: /\.tsx?$/,
                 loader: 'ts-loader'
+            },
+            {
+                test: /\.html$/,
+                loader: 'raw-loader'
             }
         ]
     }

@@ -1,4 +1,6 @@
 /typings
 /node_modules
 /.idea
+/static/src/*.js
+/static/src/*.map
 .tags*
